@@ -24,17 +24,26 @@ nav {
   background-color: #024;
 }
 
-#menu {
-  background: none;
-  color: white;
-  font-size: 2rem;
-  border: none;
-  width: 100%;
-  text-align: right;
-  padding: 0.5rem;
-  cursor: pointer;
+
+.nav-menu {
+  display: none; /* oculta por padrão */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
+.nav-menu.show {
+  display: flex; /* mostra quando o menu estiver aberto */
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0.5rem;
+}
 .navigation {
   display: none;
   flex-direction: column;
