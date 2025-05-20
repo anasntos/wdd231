@@ -3,35 +3,74 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=service-width, initial-scale=1.0">
-        <meta author="Ana Gabriely Mendes dos Santos">
-        <title>Chamber of Commerce</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta name="author" content="Ana Gabriely Mendes dos Santos">
+        <meta name="description" content="Ana's WDD 231 Course Home Page"/>
+        
+        <title>Ana | WDD 231</title>
+
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        
+        <!--css files-->
+        <link rel="stylesheet" href="styles/normalize.css"/>
+        <link rel="stylesheet" href="styles/small.css"/>
+        <link rel="stylesheet" href="styles/large.css"/>
+
+        <!--javaScript files-->
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/date.js" defer></script>
+        <script src="scripts/lastModified.js" defer></script>
+        <script src="scripts/course.js" defer></script>
     </head>
 
     <body>
         <header>
-            <h1>Ana Gabriely Mendes dos Santos</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="chamber.html">Chamber</a>
-                <a href="final.html">Final</a>
-                <a href="github.html">Github Profile</a>
-                <a href="linkedIn"> LinkedIn</a>
-            </nav>
+            <img src="images/profiles.jpg" alt="Ana's photo"/>
+            <h1><span>Ana Gabriely</span></h1>
         </header>
 
+        <nav>
+            <button id="menu" aria-label="Toggle menu">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="final/index.html">Final</a></li>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+
         <main>
-            <h2>Home Page</h2>
-            <section></section>
-            <p>This is where the main content goes.</p>
+            <h1>Home Page</h1>
+            <section>
+                <h2>About me</h2>
+                <p>Hi! I'm Ana. Welcome to my WDD 231 course homepage</p>
+            </section>
+            <section>
+                <h2>Web and Computer Programming Certificate</h2>
+                <div class="course-buttons">
+                    <button id="allBtn">All Courses</button>
+                    <button id="wddBtn">WDD Courses</button>
+                    <button id="cseBtn">CSE Courses</button>
+                </div>
+                <div id="courses"></div>
+                <p>Total Credits: <span id="totalCredits">0</span></p>
+            </section>
+            <section>
+                <h2>Learning Journal</h2>
+                <ul>
+                    <li><a href="#">Week 01</a></li>
+                    <li><a href="#">Week 02</a></li>
+                    <!-- More links as needed -->
+                </ul>
+            </section>
         </main>
 
         <footer>
-            <p>&copy;2025 Campo Largo Chamber of Commerce</p>
-            <p>Ana Gabriely</p>
-            <p>Brasil</p>
+            <p>&copy; <span id="currentYear"></span> Ana | Paraná, Brazil</p>
+            <p id="lastModified"></p>
         </footer>
 
-        <script src="scripts.js"></script>
+        
     </body>
 </html>
