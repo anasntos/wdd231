@@ -1,0 +1,60 @@
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  header img {
+    width: 100px;
+  }
+
+  nav {
+    background-color: #024;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation a {
+    border: none;
+    padding: 1rem 2rem;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .course-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .course-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #036;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .course-buttons button:hover {
+    background-color: #024;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
