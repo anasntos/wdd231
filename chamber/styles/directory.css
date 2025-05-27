@@ -1,0 +1,141 @@
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #c49000;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Botões de visualização */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button:hover {
+  background-color: #e6ac00;
+}
+
+/* Diretório: grid e lista */
+#member-directory.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#member-directory.list-view {
+  display: block;
+  padding: 1rem;
+}
+
+#member-directory.list-view .member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+#member-directory.list-view .member-card img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Cartões dos membros */
+.member-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-left: 6px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+}
+
+.member-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.member-card p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
