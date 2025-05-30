@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #c49000;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.spotlight-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.spotlight-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-left: 6px solid var(--primary-color);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.spotlight-card img {
+  max-width: 100px;
+  height: auto;
+  float: left;
+  margin-right: 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .spotlight-card-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .spotlight-card {
+    flex: 1;
+    max-width: 300px;
+  }
+}
