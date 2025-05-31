@@ -10,11 +10,12 @@
     <!--Open Graph Metadata-->
     <meta property="og:title" content="Campo Largo Chamber Directory" />
     <meta property="og:description" content="Explore our directory of businesses and members." />
-    <meta property="og:image" content="https://example.com/chamber/images/social-preview.jpg" />
+    <meta property="og:image" content="https://example.com/chamber/images/social-preview.jp" />
     <meta property="og:url" content="https://example.com/chamber/directory.html" />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     
 
 </head>
@@ -23,7 +24,7 @@
         <h1>Campo Largo Chamber of Commerce</h1>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">home</a></li>
+                <li><a href="index.html" lang="en" class="active" aria-current="page">home</a></li>
                 <li><a href="discover.html">discover</a></li>
                 <li><a href="directory.html" >directory</a></li>
                 <li><a href="join.html">join</a></li>
@@ -33,7 +34,7 @@
     <main>
         <!--HERO SECTION-->
         <section class="hero">
-            <img src="images/#" alt="Campo Largo view" loading="lazy">
+            <img src="images/campolargo.webp" alt="Campo Largo view" loading="lazy">
             <div class="cta">
                 <a href="join.html" class="join-button">Join the Chamber</a>
             </div>
@@ -71,8 +72,8 @@
         <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlights.js"></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
     <script>
        document.getElementById('last-modified').textContent = document.lastModified;
     </script>
