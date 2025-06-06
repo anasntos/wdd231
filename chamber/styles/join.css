@@ -1,0 +1,243 @@
+
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #c49000;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Global ---------- */
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a:hover,
+nav a.active,
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* ---------- Main Layout ---------- */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ---------- Form ---------- */
+form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+form legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  justify-self: start;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ---------- Membership Cards ---------- */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* add .visible via JS to trigger fade‑in */
+.card.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.card p {
+  margin-bottom: 0.75rem;
+}
+
+.card button {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Dialog (Modal) ---------- */
+
+/* default dialog element */
+dialog {
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+dialog h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+dialog button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+dialog button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ---------- Media Queries ---------- */
+@media (min-width: 600px) {
+  form fieldset {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  input[type="submit"] {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
+  form {
+    flex: 2;
+  }
+
+  .membership-cards {
+    flex: 1;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .membership-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

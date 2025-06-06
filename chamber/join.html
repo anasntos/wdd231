@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ana Gabriely Mendes dos Santos" />
+  <meta name="description" content="Directory of local businesses and members of the Campo Largo Chamber of Commerce." />
+  <title>Join - Campo Largo Chamber of Commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Facebook Open Graph meta tags -->
+  <meta property="og:title" content="Campo Largo Chamber Directory" />
+  <meta property="og:description" content="Explore our directory of businesses and members." />
+  <meta property="og:image" content="https://example.com/chamber/images/social-preview.jpg" />
+  <meta property="og:url" content="https://example.com/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles/join.css" />
+  <script defer src="scripts/join.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" lang="en">home</a></li>
+        <li><a href="discover.html">discover</a></li>
+        <li><a href="directory.html" class="active" aria-current="page">directory</a></li>
+        <li><a href="join.html">join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Join the Chamber of Commerce</h1>
+    <section>
+      <form method="get" action="thankyou.html">
+        <fieldset>
+          <legend>Membership Application</legend>
+
+          <label for="firstName">First Name:
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+          </label>
+
+          <label for="lastName">Last Name:
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+          </label>
+
+          <label for="orgTitle">Organization Title:
+            <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\\-\\s]{7,}" />
+          </label>
+
+          <label for="email">Email:
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="example@example.com" />
+          </label>
+
+          <label for="phone">Mobile Phone:
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+          </label>
+
+          <label for="organization">Business/Organization Name:
+            <input type="text" id="organization" name="organization" autocomplete="organization" required />
+          </label>
+
+          <label for="membership">Membership Level:
+            <select id="membership" name="membership" required>
+              <option value="np">NP Membership</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label for="description">Business Description:
+            <textarea id="description" name="description"></textarea>
+          </label>
+
+          <input type="hidden" name="timestamp" id="timestamp" />
+          <input type="submit" value="Join Now" />
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="membership-cards">
+      <div class="card" id="np-card">
+        <h2>NP Membership</h2>
+        <p>No fee. Ideal for nonprofit organizations.</p>
+        <button type="button" onclick="document.getElementById('np-modal').showModal()">More Info</button>
+      </div>
+
+      <div class="card" id="bronze-card">
+        <h2>Bronze Membership</h2>
+        <p>Basic benefits at a low cost.</p>
+        <button type="button" onclick="document.getElementById('bronze-modal').showModal()">More Info</button>
+      </div>
+
+      <div class="card" id="silver-card">
+        <h2>Silver Membership</h2>
+        <p>Includes additional events and training.</p>
+        <button type="button" onclick="document.getElementById('silver-modal').showModal()">More Info</button>
+      </div>
+
+      <div class="card" id="gold-card">
+        <h2>Gold Membership</h2>
+        <p>Top tier benefits including advertising perks.</p>
+        <button type="button" onclick="document.getElementById('gold-modal').showModal()">More Info</button>
+      </div>
+    </section>
+
+    <!-- Membership Modals -->
+    <dialog id="np-modal">
+      <h3>NP Membership Benefits</h3>
+      <p>Free membership for nonprofits. Includes access to community events.</p>
+      <button aria-label="Close NP Membership Modal" onclick="document.getElementById('np-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h3>Bronze Membership Benefits</h3>
+      <p>Access to events, monthly newsletter, and business listing.</p>
+      <button aria-label="Close Bronze Membership Modal" onclick="document.getElementById('bronze-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h3>Silver Membership Benefits</h3>
+      <p>Everything in Bronze plus discounts, training, and spotlights.</p>
+      <button aria-label="Close Silver Membership Modal" onclick="document.getElementById('silver-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h3>Gold Membership Benefits</h3>
+      <p>All benefits plus prominent homepage ads and event sponsorships.</p>
+      <button aria-label="Close Gold Membership Modal" onclick="document.getElementById('gold-modal').close()">Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>Contact: info@campolargochamber.org</p>
+    <p>©2025 Campo Largo Chamber | Ana Santos | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    // Timestamp automático
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    // Data da última modificação
+    document.getElementById("last-modified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
