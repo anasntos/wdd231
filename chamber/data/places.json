@@ -1,0 +1,44 @@
+[
+    {
+        "name":"Serra Coffee",
+        "address": "102 Araucárias Street",
+        "description": "A cozy coffee shop with mountain views, specializing in artisanal coffee and local pastries"    
+    },
+    
+        {
+        "name":"Stone Art Studio",
+        "address": "55 Sculptors Street",
+        "description": "An art space offering soapstone sculpture workshops, a traditional craft of the region."
+    },
+      {
+        "name":"Clear Waters Trail",
+        "address": "Águas Rural Road, km 5",
+        "description": "An ecological trail with waterfalls and scenic viewpoints, perfect for hiking and photography."
+    },
+      {
+        "name":"Clay Pot Bistro",
+        "address": "890 Central Avenue",
+        "description": "A homemade food restaurant serving dishes in clay pots, famous for its Saturday feijoada."
+    },
+      {
+        "name":"Roots Cultural Center",
+        "address": "45 Main Square",
+        "description": "A cultural center with exhibitions, poetry nights, music performances, and local crafts."
+    },
+      {
+        "name":"Campo Largo Winery",
+        "address": "BR-277 Highway, km 125",
+        "description": "A family-owned winery offering guided tours, wine tastings, and artisanal cheeses."
+    },
+      {
+        "name":"Araucária Park",
+        "address": "300 Pioneiros Street",
+        "description": "An urban park with trails, a playground, a lake, and many araucaria trees — the symbol of the city."
+    },
+      {
+        "name":"Ceramics Museum",
+        "address": "210 Olarias Street",
+        "description": "A museum that tells the history of ceramics in Campo Largo, featuring antique pieces and workshops."
+    }
+
+]
