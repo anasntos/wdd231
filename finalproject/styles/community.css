@@ -1,0 +1,82 @@
+.posts-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.posts-section h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.post {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.post h2 {
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.post .date {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.post p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.new-post-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.new-post-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.new-post-section form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.new-post-section form input,
+.new-post-section form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.new-post-section form button {
+  margin-top: 15px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-post-section form button:hover {
+  background-color: #ff9b89; /* tom mais escuro do accent */
+}

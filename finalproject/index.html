@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ColorBase Converter</title>
+  <meta name="description" content="Foundation shade converter and community contribution tool">
+  <meta name="author" content="Ana Gabriely Mendes dos Santos">
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">ColorBase Converter</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="siteplan.html">Site Plan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-button">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="converter">
+      <h2>Foundation Shade Converter</h2>
+      <p>Find your foundation shade in different brands.</p>
+      <form>
+        <label for="brand">Current Brand:</label>
+        <select id="brand" name="brand">
+          <option>MAC</option>
+          <option>Maybelline</option>
+          <option>Fenty</option>
+        </select>
+
+        <label for="shade">Current Shade:</label>
+        <input type="text" id="shade" name="shade" placeholder="e.g., NC25">
+
+        <label for="target-brand">Target Brand:</label>
+        <select id="target-brand" name="target-brand">
+          <option>Maybelline</option>
+          <option>Fenty</option>
+          <option>MAC</option>
+        </select>
+
+        <button type="submit">Find Match</button>
+      </form>
+    </section>
+
+    <section class="contribute">
+      <h2>Contribute a Shade Match</h2>
+      <p>Help others by submitting your known shade matches.</p>
+      <form>
+        <label for="your-brand">Your Brand:</label>
+        <input type="text" id="your-brand" name="your-brand">
+
+        <label for="your-shade">Your Shade:</label>
+        <input type="text" id="your-shade" name="your-shade">
+
+        <label for="matched-brand">Matched Brand:</label>
+        <input type="text" id="matched-brand" name="matched-brand">
+
+        <label for="matched-shade">Matched Shade:</label>
+        <input type="text" id="matched-shade" name="matched-shade">
+
+        <button type="submit">Submit Match</button>
+      </form>
+    </section>
+
+    <section class="newsletter">
+      <h2>Subscribe to Newsletter</h2>
+      <p>Get updates about new brands, features, and shade matches.</p>
+      <form>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="images/image1.webp" alt="Foto 1" class="active" />
+            <img src="images/image2.webp" alt="Foto 2" />
+            <img src="images/image3.webp" alt="Foto 3" />
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="Year"></span> Ana | Paraná, Brazil</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/carrossel.js"></script>
+</body>
+</html>

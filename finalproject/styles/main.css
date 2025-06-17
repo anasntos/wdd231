@@ -1,0 +1,298 @@
+/* Root Variables */
+:root {
+  --primary-color: #6eb3b6;
+  --secondary-color: #f1faee;
+  --accent-color: #ffb4a2;
+  --text-color: #1d3557;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header/Nav */
+header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+/* Menu Button (Mobile) */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Main Layout */
+main {
+  display: grid;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+main section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff9b8a;
+}
+
+/* Responsive Layout */
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "converter contribute"
+      "newsletter newsletter";
+  }
+
+  .converter {
+    grid-area: converter;
+  }
+
+  .contribute {
+    grid-area: contribute;
+  }
+
+  .newsletter {
+    grid-area: newsletter;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+    background-color: var(--primary-color);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 40px auto 20px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-section h1 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.contact-section form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  resize: vertical;
+}
+
+.contact-section form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section form button:hover {
+  background-color: #ff9b89; /* tom mais escuro do accent */
+}
+
+#form-status {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.carousel {
+  .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;  /* limita o tamanho máximo */
+  margin: 0 auto;     /* centraliza horizontalmente */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+}
+
+.carousel-images img {
+  width: 100%;  /* imagem ocupa toda a largura do carrossel */
+  display: none;
+  border-radius: 10px;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
